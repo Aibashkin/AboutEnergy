@@ -26,6 +26,53 @@ body {
     background-color: var(--color-black);
 }
 
+/* бургер */
+
+.offset{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--color-black);
+    z-index: 1000;
+}
+
+.offset ul {
+    padding: 60px 0 0 0;
+    display: grid;
+    row-gap: 20px;
+    justify-items: center;
+    list-style-type: none;
+    color: var(--color-white);
+}
+
+.offset ul a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: var(--font-Mont);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.offset ul a:hover {
+    color: var(--color-dark-primary);
+}
+
+.offset nav {
+    display: grid;
+    grid-template-rows: 44px 1fr;
+}
+
+.offset nav svg {
+    color: var(--color-white);
+    width: 22px;
+    height: 22px;
+    justify-self: end;
+    margin: 22px 5px 0 0;
+}
+
 /* меню */
 
 header header {
@@ -67,6 +114,16 @@ header header div {
     align-items: center;
     justify-self: end;
     color: var(--color-white);
+}
+
+header header svg#miniLogo {
+    display: none;
+}
+
+header header svg#burger {
+    color: var(--color-white);
+    width: 20px;
+    display: none;
 }
 
 /* кнопки */
@@ -115,17 +172,141 @@ main section.brands div article.leftImage div a::after {
     border-color: var(--color-yellow) var(--color-black) var(--color-black)  var(--color-black);
 }
 
+main section.brands div article.rightImage a {
+    text-decoration: none;
+    color: var(--color-black);
+    text-align: center;
+    background-color: var(--color-yellow);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    align-self: end;
+    justify-self: start;
+    font-family: var(--font-Mont);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+main section.brands div article.leftImage a {
+    text-decoration: none;
+    color: var(--color-black);
+    text-align: center;
+    background-color: var(--color-yellow);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    align-self: end;
+    justify-self: start;
+    font-family: var(--font-Mont);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+main section.brands div article.rightImage a::before {
+    content: '';
+    position: relative;
+    bottom: 24px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 30px 30px;
+    border-color: var(--color-black) var(--color-black) var(--color-yellow) var(--color-black);
+}
+
+main section.brands div article.leftImage a::before {
+    content: '';
+    position: relative;
+    bottom: 24px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 30px 30px;
+    border-color: var(--color-black) var(--color-black) var(--color-yellow) var(--color-black);
+}
+
+main section.brands div article.rightImage a::after {
+    content: '';
+    position: relative;
+    bottom: -24px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: var(--color-yellow) var(--color-black) var(--color-black) var(--color-black);
+}
+
+main section.brands div article.leftImage a::after {
+    content: '';
+    position: relative;
+    bottom: -24px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: var(--color-yellow) var(--color-black) var(--color-black) var(--color-black);
+}
+
+main section.obratka a.minisend {
+    text-decoration: none;
+    color: var(--color-black);
+    text-align: center;
+    background-color: var(--color-yellow);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    align-self: end;
+    justify-self: start;
+    font-family: var(--font-Mont);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+main section.obratka a.minisend::before {
+    content: '';
+    position: relative;
+    bottom: 24px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 30px 30px;
+    border-color: var(--color-black) var(--color-black) var(--color-yellow) var(--color-black);
+}
+
+main section.obratka a.minisend::after {
+    content: '';
+    position: relative;
+    bottom: -24px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: var(--color-yellow) var(--color-black) var(--color-black) var(--color-black);
+}
+
 /* секция слайдера */
 
 header footer {
     height: 800px;
 }
 
-header footer img {
-    position: relative;
+header footer div img {
     width: 100%;
-    height: 100%;
+    height: 800px;
+    object-fit: cover;
     opacity: 30%;
+}
+
+header footer div img {
+    display: none;
+}
+
+header footer div img.active {
+    display: block;
+}
+
+.sliderText span {
+    display: none;
+}
+
+.sliderText span.active {
+    display: block;
 }
 
 header footer svg#right {
@@ -164,6 +345,10 @@ header footer span {
 
 /* секция с брендами */
 
+.miniBrand {
+    display: none;
+}
+
 main section.brands {
     padding: 100px 250px;
 }
@@ -185,6 +370,10 @@ main section.brands>div {
 
 /* .rightImage */
 
+main section.brands div article.rightImage>a {
+    display: none;
+}
+
 main section.brands div article.rightImage {
     color: var(--color-white);
     display: grid;
@@ -192,7 +381,6 @@ main section.brands div article.rightImage {
     column-gap: 20px;
     padding-bottom: 60px;
     border-bottom: 2px solid var(--color-yellow);
-    
 }
 
 main section.brands div article.rightImage div {
@@ -221,6 +409,10 @@ main section.brands div article.rightImage div a {
 } 
 
 /* .leftImage */
+
+main section.brands div article.leftImage>a {
+    display: none;
+}
 
 main section.brands div article.leftImage {
     color: var(--color-white);
@@ -348,7 +540,11 @@ main section.obratka form input::placeholder {
     text-align: center;
 }
 
-main section.obratka a {
+main section.obratka a.minisend {
+    display: none;
+}
+
+main section.obratka a.bigsend {
     margin-top: 40px;
     text-decoration: none;
     font-family: var(--font-Mont);
@@ -360,7 +556,7 @@ main section.obratka a {
     background-color: var(--color-yellow);
 }
 
-main section.obratka a::before {
+main section.obratka a.bigsend::before {
     content: '';
     width: 0;
     height: 0;
@@ -371,7 +567,7 @@ main section.obratka a::before {
     border-color:  var(--color-black) var(--color-black) var(--color-yellow) var(--color-black);
 }
 
-main section.obratka a::after {
+main section.obratka a.bigsend::after {
     content: '';
     width: 0;
     height: 0;
@@ -394,6 +590,10 @@ body>footer {
     border-top: 2px solid var(--color-yellow);
 }
 
+#miniLogo {
+    display: none;
+}
+
 footer div.contacts {
     color: var(--color-white);
     display: grid;
@@ -409,4 +609,181 @@ footer div {
     display: flex;
     justify-self: end;
     column-gap: 20px;
+}
+
+.miniNews {
+    display: none;
+}
+
+@media screen and (max-width:390px) {
+    header header svg:nth-child(2) {
+        display: block;
+    }
+    header header svg#logo, header header nav {
+        display: none;
+    } 
+    header header svg#miniLogo, header header svg#burger {
+        display: block;
+    }
+    header header svg#burger {
+        grid-column: 3/4;
+    }
+    header header div {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        justify-items: end;
+    }
+    header header {
+        display: grid;
+        padding: 15px 3px;
+        grid-template-columns: 1fr 1fr 25px;
+        column-gap: 40px;
+    }
+    header footer {
+        width: 100%;
+        height: 225px;
+    }
+    header footer div img {
+        width: 100%;
+        height: 225px;
+        object-fit: cover;
+    }
+    header footer span {
+        font-family: var(--font-Mont);
+        font-size: 16px;
+        font-weight: 700;
+        position: relative;
+        left: 3px;
+        width: 60%;
+        top: -290px;
+    }
+    main section.brands {
+        padding: 20px 0 0 0;
+        width: 100%;
+    }
+    main section.brands>div {
+        row-gap: 20px;
+    }
+    main section.brands h2 {
+        font-family: var(--font-Mont);
+        font-weight: 700;
+        font-size: 18px;
+    }
+    main section.brands div article.rightImage svg, main section.brands div article.rightImage p, 
+    main section.brands div article.rightImage div a.pipi {
+        display: none;
+    }
+    main section.brands div article.leftImage svg, main section.brands div article.leftImage p, 
+    main section.brands div article.leftImage div a.pipi {
+        display: none;
+    }
+    main section.brands div article.leftImage svg.miniBrand, main section.brands div article.leftImage>a, 
+    main section.brands div article.rightImage>a, main section.brands div article.rightImage svg.miniBrand, 
+    main section.obratka a.minisend, #miniLogo {
+        display: block;
+    }
+    main section.brands div article.rightImage{
+        padding-bottom: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    main section.brands div article.leftImage{
+        padding-bottom: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    main section.brands div article.leftImage{
+        padding-bottom: 10px;
+    }
+    main section.brands div article.rightImage a {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        align-self: center;
+        justify-self: center;
+    }
+    main section.brands div article.leftImage a {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        align-self: center;
+        justify-self: center;
+    }
+    main section.news {
+        padding: 0;
+    }
+    main section.news h2 {
+        font-size: 18px;
+        padding: 20px 0 0 10px;
+    }
+    main section.news div{
+        padding: 10px 20px 20px 20px;
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
+    main section.news div {
+        border: none;
+    }
+    main section.news div article {
+        border-bottom: 2px solid var(--color-yellow);
+    }
+    main section.news div article a {
+        display: grid;
+        padding: 0;
+        grid-template-columns: 1fr 2fr;
+        padding-bottom: 5px;
+        align-items: center;
+    }
+    main section.news div article a .miniNews {
+        display: block;
+        grid-column: 1/2;
+    }
+    main section.news div article a .bigNews {
+        display: none;
+    }
+    main section.news div article a p {
+        font-size: 16px;
+        font-weight: 400;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    main section.obratka {
+        padding: 0;
+        display: grid;
+        justify-items: center;
+    }
+    main section.obratka h2 {
+        font-size: 18px;
+        font-weight: 700;
+        justify-self: center;
+        padding: 0 88px 0px 88px;
+        border: none;
+        margin-bottom: 0;
+    }
+    main section.obratka form {
+        padding-top: 0px;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+    main section.obratka form input {
+        padding: 0;
+    }
+    main section.obratka form input::placeholder, main section.obratka form textarea {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    main section.obratka a.bigsend {
+        display: none;
+    }
+    main section.obratka a.minisend {
+        margin-top: 18px;
+        justify-self: center;
+    }
+    body>footer {
+        padding: 10px 15px 10px 15px;
+        margin-top: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+    body>footer>svg:nth-child(1), body>footer div.contacts {
+        display: none;
+    }
+    body>footer>svg {
+        justify-self: center;
+    }
 }
