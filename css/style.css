@@ -293,22 +293,6 @@ header footer div img {
     opacity: 30%;
 }
 
-header footer div img {
-    display: none;
-}
-
-header footer div img.active {
-    display: block;
-}
-
-.sliderText span {
-    display: none;
-}
-
-.sliderText span.active {
-    display: block;
-}
-
 header footer svg#right {
     opacity: 50%;
     color: var(--color-white);
@@ -337,7 +321,7 @@ header footer span {
     font-weight: 700;
     color: var(--color-white);
     display: block;
-    width: 30%;
+    width: 35%;
     position: relative;
     bottom: 215px;
     left: 310px;
