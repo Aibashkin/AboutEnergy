@@ -15,10 +15,10 @@ const burger = () => {
 
 
 
-const sliderImage = document.querySelector("header footer div img");
-const leftButton = document.querySelector("header footer #left");
-const rightButton = document.querySelector("header footer #right");
-const sliderText = document.querySelector("header footer span");
+const sliderImage = document.querySelector("header .footer div img");
+const leftButton = document.querySelector("header .footer #left");
+const rightButton = document.querySelector("header .footer #right");
+const sliderText = document.querySelector("header .footer span");
 
 
 let currentImageIndex = 0;
@@ -41,34 +41,6 @@ function changeImage(direction) {
 leftButton.addEventListener("click", () => changeImage("left"));
 rightButton.addEventListener("click", () => changeImage("right"));
 
-
-
-
-
-
-
-
-
-
-
-// const slider = () => {
-//     const sliderImage = document.querySelectorAll('header footer div img')
-//     const btnLeft = document.querySelectorAll('header footer #left')
-//     const btnRight = document.querySelectorAll('header footer #right')
-//     console.log(sliderImage, btnLeft, btnRight)
-
-//     function removeActive(array){
-//         for (const elem of array) {
-//            elem.classList.remove('active')
-//         }
-//      }
-
-//     btnLeft.addEventListener('click', () => {
-//         removeActive(sliderImage)
-//     })
-// }
-
-// slider()
 
 
 

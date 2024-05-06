@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Regular.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover
+}
+
+:root {
+    --color-yellow: #FFFF00;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --font-Mont: 'Montserrat';
+}
+
+body {
+    background-color: var(--color-black);
+}
+
+/* бургер */
+
+.offset{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--color-black);
+    z-index: 1000;
+}
+
+.offset ul {
+    padding: 60px 0 0 0;
+    display: grid;
+    row-gap: 20px;
+    justify-items: center;
+    list-style-type: none;
+    color: var(--color-white);
+}
+
+.offset ul a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: var(--font-Mont);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.offset ul a:hover {
+    color: var(--color-dark-primary);
+}
+
+.offset nav {
+    display: grid;
+    grid-template-rows: 44px 1fr;
+}
+
+.offset nav svg {
+    color: var(--color-white);
+    width: 22px;
+    height: 22px;
+    justify-self: end;
+    margin: 22px 5px 0 0;
+}
+
+/* меню */
+
+header article.header {
+    padding: 10px 250px;
+    display: flex;
+    column-gap: 60px;
+    align-items: center;
+    border-bottom: 2px solid var(--color-yellow);
+}
+
+header article.header svg.miniLogo, header article.header svg#burger {
+    display: none;
+}
+
+header article.header nav ul {
+    display: flex;
+    list-style-type: none;
+    column-gap: 130px;
+}
+
+header article.header nav ul li a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: var(--font-Mont);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header article.header div {
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+
+header article.header div a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font-Mont);
+}
+
+/* .tovar */
+
+main section.tovar {
+    padding: 100px 250px;
+}
+
+main section.tovar span {
+    display: grid;
+    justify-items: center;
+    padding: 0 0 30px 0;
+    color: var(--color-white);
+    font-family: var(--font-Mont);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+main section.tovar div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 60px;
+}
+
+main section.tovar div article {
+    display: grid;
+    justify-items: center;
+    padding: 0 0 30px 0;
+    border-bottom: 2px solid var(--color-yellow);
+}
+
+main section.tovar div article a.miniZakaz, main section.tovar div article svg.miniTovar {
+    display: none;
+}
+
+main section.tovar div article p {
+    padding: 20px 0 30px 0;
+    color: var(--color-white);
+    font-family: var(--font-Mont);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* кнопки */
+
+/* большие кнопки */
+
+main section.tovar div article a.bigZakaz {
+    text-decoration: none;
+    color: var(--color-black);
+    text-align: center;
+    background-color: var(--color-yellow);
+    padding: 10px 40px 10px 40px;
+    font-family: var(--font-Mont);
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    height: 38px;
+}
+
+main section.tovar div article a.bigZakaz::before {
+    position: absolute;
+    left: -38px;
+    top: 0;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 38px 38px;
+    border-color: transparent transparent var(--color-yellow) transparent;
+}
+
+main section.tovar div article a.bigZakaz::after {
+    position: absolute;
+    right: -38px;
+    top: 0;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 38px 38px 0 0  ;
+    border-color: var(--color-yellow) transparent transparent transparent;
+}
+
+/* маленькие кнопки */
+
+main section.tovar div article a.miniZakaz {
+    text-decoration: none;
+    color: var(--color-black);
+    text-align: center;
+    background-color: var(--color-yellow);
+    padding: 5px 10px 5px 10px;
+    font-family: var(--font-Mont);
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    height: 30px;
+}
+
+main section.tovar div article a.miniZakaz::before {
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 30px 30px;
+    border-color: transparent transparent var(--color-yellow) transparent;
+}
+
+main section.tovar div article a.miniZakaz::after {
+    position: absolute;
+    bottom: 0;
+    right: -30px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0 0 ;
+    border-color: var(--color-yellow ) transparent transparent transparent;
+}
+
+/* footer */
+
+body>footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px 250px;
+    align-items: center;
+    border-top: 2px solid var(--color-yellow);
+}
+
+body>footer>a>svg#miniLogo {
+    display: none;
+}
+
+footer div.contacts {
+    color: var(--color-white);
+    display: grid;
+    row-gap: 10px;
+    justify-items: center;
+    justify-self: center;
+    font-family: var(--font-Mont);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+body>footer>div {
+    display: flex;
+    justify-self: end;
+    column-gap: 20px;
+}
+
+@media screen and (max-width:390px) {
+    header header svg:nth-child(2) {
+        display: block;
+    }
+    header header svg#logo, header header nav {
+        display: none;
+    } 
+    header header svg#miniLogo, header header svg#burger {
+        display: block;
+    }
+    header header svg#burger {
+        grid-column: 3/4;
+    }
+    header header div {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        justify-items: end;
+    }
+    header header {
+        display: grid;
+        padding: 15px 3px;
+        grid-template-columns: 1fr 1fr 25px;
+        column-gap: 40px;
+    }
+    main section.tovar {
+        padding: 0;
+    }
+    main section.tovar span {
+        font-size: 16px;
+        padding: 20px 0 10px 0;
+    }
+    main section.tovar div {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+    main section.tovar div article {
+        grid-template-columns: 1fr 2fr;
+        position: relative;
+        padding-bottom: 10px;
+    }
+    main section.tovar div article svg, main section.tovar div article a {
+        display: none;
+    }
+    main section.tovar div article svg.miniTovar, main section.tovar div article a.miniZakaz,
+    body>footer>a>svg#miniLogo {
+        display: block;
+    }
+    main section.tovar div article p {
+        font-size: 14px;
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+    main section.tovar div article a.miniZakaz {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        position: absolute;
+        bottom: 10px;
+    }
+    body>footer {
+        padding: 10px 15px 10px 15px;
+        margin-top: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+    body>footer>a>svg:nth-child(1), body>footer div.contacts {
+        display: none;
+    }
+    body>footer>svg {
+        justify-self: center;
+    }
+}

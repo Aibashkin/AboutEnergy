@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Regular.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover
+}
+
+:root {
+    --color-yellow: #FFFF00;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --font-Mont: 'Montserrat';
+}
+
+body {
+    background-color: var(--color-black);
+}
+
+/* бургер */
+
+.offset{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--color-black);
+    z-index: 1000;
+}
+
+.offset ul {
+    padding: 60px 0 0 0;
+    display: grid;
+    row-gap: 20px;
+    justify-items: center;
+    list-style-type: none;
+    color: var(--color-white);
+}
+
+.offset ul a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: var(--font-Mont);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.offset ul a:hover {
+    color: var(--color-dark-primary);
+}
+
+.offset nav {
+    display: grid;
+    grid-template-rows: 44px 1fr;
+}
+
+.offset nav svg {
+    color: var(--color-white);
+    width: 22px;
+    height: 22px;
+    justify-self: end;
+    margin: 22px 5px 0 0;
+}
+
+/* меню */
+
+header article.header {
+    padding: 10px 250px;
+    display: flex;
+    column-gap: 60px;
+    align-items: center;
+    border-bottom: 2px solid var(--color-yellow);
+}
+
+header article.header svg.miniLogo, header article.header svg#burger {
+    display: none;
+}
+
+header article.header nav ul {
+    display: flex;
+    list-style-type: none;
+    column-gap: 130px;
+}
+
+header article.header nav ul li a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: var(--font-Mont);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header article.header div {
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+
+header article.header div a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font-Mont);
+}

@@ -75,7 +75,47 @@ body {
 
 /* меню */
 
-header header {
+header article.header {
+    padding: 10px 250px;
+    display: flex;
+    column-gap: 60px;
+    align-items: center;
+    border-bottom: 2px solid var(--color-yellow);
+}
+
+header article.header svg.miniLogo, header article.header svg#burger {
+    display: none;
+}
+
+header article.header nav ul {
+    display: flex;
+    list-style-type: none;
+    column-gap: 130px;
+}
+
+header article.header nav ul li a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: var(--font-Mont);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header article.header div {
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+
+header article.header div a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font-Mont);
+}
+
+/* header article {
     padding: 10px 250px;
     display: grid;
     grid-template-columns: 1fr 7fr 1fr;
@@ -84,21 +124,21 @@ header header {
     border-bottom: 2px solid var(--color-yellow);
 }
 
-header header #logo {
+header article #logo {
     justify-self: start;
 }
 
-header header nav ul {
+header article nav ul {
     display: flex;
     justify-self: center;
     column-gap: 130px;
 }
 
-header header nav ul a {
+header article nav ul li a {
     text-decoration: none;
 }
 
-header header nav ul a li {
+header article nav ul li a {
     font-family: var(--font-Mont);
     font-size: 16px;
     font-weight: 500;
@@ -106,7 +146,7 @@ header header nav ul a li {
     color: var(--color-white);
 }
 
-header header div {
+header article div {
     font-family: var(--font-Mont);
     font-size: 16px;
     font-weight: 500;
@@ -116,15 +156,20 @@ header header div {
     color: var(--color-white);
 }
 
-header header svg#miniLogo {
+header article div a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+header article svg.miniLogo {
     display: none;
 }
 
-header header svg#burger {
+header article svg#burger {
     color: var(--color-white);
     width: 20px;
     display: none;
-}
+} */
 
 /* кнопки */
 
@@ -282,18 +327,18 @@ main section.obratka a.minisend::after {
 
 /* секция слайдера */
 
-header footer {
+header article.footer {
     height: 800px;
 }
 
-header footer div img {
+header article.footer div img {
     width: 100%;
     height: 800px;
     object-fit: cover;
     opacity: 30%;
 }
 
-header footer svg#right {
+header article.footer svg#right {
     opacity: 50%;
     color: var(--color-white);
     width: 60px;
@@ -303,7 +348,7 @@ header footer svg#right {
     right: 250px;
     z-index: 1;
 }
-header footer svg#left {
+header article.footer svg#left {
     opacity: 50%;
     color: var(--color-white);
     width: 60px;
@@ -314,7 +359,7 @@ header footer svg#left {
     z-index: 1;
 }
 
-header footer span {
+header article.footer span {
     font-family: var(--font-Mont);
     font-size: 40px;
     font-weight: 700;
@@ -561,8 +606,6 @@ main section.obratka a.bigsend::after {
     border-color: var(--color-yellow) var(--color-black) var(--color-black)  var(--color-black);
 }
 
-
-
 /* footer */
 
 body>footer {
@@ -573,7 +616,7 @@ body>footer {
     border-top: 2px solid var(--color-yellow);
 }
 
-#miniLogo {
+.miniLogo {
     display: none;
 }
 
@@ -599,42 +642,46 @@ body>footer>div {
 }
 
 @media screen and (max-width:390px) {
-    header header svg:nth-child(2) {
+    header article.header svg:nth-child(2) {
         display: block;
     }
-    header header svg#logo, header header nav {
+    header article.header svg#logo, header article.header nav {
         display: none;
     } 
-    header header svg#miniLogo, header header svg#burger {
+    header article.header svg.miniLogo, header article.header svg#burger {
         display: block;
     }
-    header header svg#burger {
+    header article.header svg#burger {
         grid-column: 3/4;
     }
-    header header div {
+    header article.header div {
         grid-row: 1/2;
         grid-column: 2/3;
         justify-items: end;
     }
-    header header {
-        display: grid;
+    header article.header {
         padding: 15px 3px;
+        display: grid;
         grid-template-columns: 1fr 1fr 25px;
-        column-gap: 40px;
     }
-    header footer {
+    header article.footer {
         width: 100%;
         height: 225px;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+        border: none;
     }
-    header footer div {
+    header article.footer div {
         height: 225px;
     }
-    header footer div img {
+    header article.footer div img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        opacity: 30%;
     }
-    header footer span {
+    header article.footer span {
         font-family: var(--font-Mont);
         font-size: 16px;
         font-weight: 700;
@@ -643,13 +690,13 @@ body>footer>div {
         left: 0px;
         width: 61%;
     }
-    header footer svg#right {
+    header article.footer svg#right {
         padding: 15px;
         position: absolute;
         right: 5px;
         top: 150px;
     }
-    header footer svg#left {
+    header article.footer svg#left {
         padding: 15px;
         position: absolute;
         left: 5px;
@@ -658,6 +705,7 @@ body>footer>div {
     main section.brands {
         padding: 20px 0 0 0;
         width: 100%;
+        border-top: 2px solid var(--color-yellow);
     }
     main section.brands>div {
         row-gap: 20px;
@@ -678,7 +726,7 @@ body>footer>div {
     }
     main section.brands div article.leftImage svg.miniBrand, main section.brands div article.leftImage>a, 
     main section.brands div article.rightImage>a, main section.brands div article.rightImage svg.miniBrand, 
-    main section.obratka a.minisend, #miniLogo {
+    main section.obratka a.minisend, .miniLogo {
         display: block;
     }
     main section.brands div article.rightImage{
