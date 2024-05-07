@@ -209,6 +209,11 @@ main section.brands {
 
 main section.brands span {
     color: var(--color-white);
+    justify-self: center;
+    font-family: var(--font-Mont);
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 20px;
 }
 
 main section.brands article.leftImage {
@@ -264,7 +269,7 @@ main section.brands article.rightImage p {
     grid-row: 1/2;
 }
 
-main section.brands article.leftImage a {
+main section.brands article.leftImage a.bigZakaz {
     grid-row: 2/3;
     grid-column: 2/3;
     text-decoration: none;
@@ -283,7 +288,7 @@ main section.brands article.leftImage a {
     font-weight: 500;
 }
 
-main section.brands article.rightImage a {
+main section.brands article.rightImage a.bigZakaz {
     grid-row: 2/3;
     grid-column: 1/2;
     text-decoration: none;
@@ -302,7 +307,7 @@ main section.brands article.rightImage a {
     font-weight: 500;
 }
 
-main section.brands article.leftImage a::before, main section.brands article.rightImage a::before {
+main section.brands article.leftImage a.bigZakaz::before, main section.brands article.rightImage a.bigZakaz::before {
     content: '';
     width: 0;
     height: 0;
@@ -314,7 +319,7 @@ main section.brands article.leftImage a::before, main section.brands article.rig
     left: -80px;
 }
 
-main section.brands article.leftImage a::after, main section.brands article.rightImage a::after {
+main section.brands article.leftImage a.bigZakaz::after, main section.brands article.rightImage a.bigZakaz::after {
     content: '';
     width: 0;
     height: 0;
@@ -324,6 +329,56 @@ main section.brands article.leftImage a::after, main section.brands article.righ
     position: absolute;
     top: 0;
     right: -80px;
+}
+
+main section.brands article.leftImage a.miniZakaz {
+    text-decoration: none;
+    color: var(--color-black);
+    text-align: center;
+    background-color: var(--color-yellow);
+    padding: 10px 15px;
+    position: absolute;
+    right: 38px;
+    font-family: var(--font-Mont);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+main section.brands article.rightImage a.miniZakaz {
+    text-decoration: none;
+    color: var(--color-black);
+    text-align: center;
+    background-color: var(--color-yellow);
+    padding: 10px 15px;
+    position: absolute;
+    left: 38px;
+    font-family: var(--font-Mont);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+main section.brands article.leftImage a.miniZakaz::before, main section.brands article.rightImage a.miniZakaz::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 38px 38px;
+    border-color: transparent transparent var(--color-yellow) transparent;
+    position: absolute;
+    top: 0;
+    left: -38px;
+}
+
+main section.brands article.leftImage a.miniZakaz::after, main section.brands article.rightImage a.miniZakaz::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 38px 38px 0 0;
+    border-color: var(--color-yellow) transparent transparent transparent;
+    position: absolute;
+    top: 0;
+    right: -38px;
 }
 
 /* .news */
@@ -547,54 +602,33 @@ body>footer>div {
         top: 150px;
     }
     main section.brands {
-        padding: 20px 0 0 0;
-        width: 100%;
-        border-top: 2px solid var(--color-yellow);
-    }
-    main section.brands>div {
+        padding: 20px 10px;
         row-gap: 20px;
     }
-    main section.brands h2 {
-        font-family: var(--font-Mont);
-        font-weight: 700;
+    main section.brands span {
         font-size: 18px;
+        padding-bottom: 0;
+    }
+    main section.brands article.leftImage {
+        grid-template-columns: 170px 1fr;
+        grid-template-rows: auto;
         padding-bottom: 10px;
     }
-    main section.brands div article.rightImage svg, main section.brands div article.rightImage p, 
-    main section.brands div article.rightImage div a.pipi {
+    main section.brands article.leftImage img, main section.brands article.rightImage img {
+        height: 100px;
+    }
+    main section.brands article.rightImage {
+        grid-template-columns:1fr 170px ;
+        grid-template-rows: auto;
+        padding-bottom: 10px;
+    }
+    main section.brands article.rightImage p, main section.brands article.rightImage a.bigZakaz,
+    main section.brands article.leftImage p, main section.brands article.leftImage a.bigZakaz {
         display: none;
     }
-    main section.brands div article.leftImage svg, main section.brands div article.leftImage p, 
-    main section.brands div article.leftImage div a.pipi {
-        display: none;
-    }
-    main section.brands div article.leftImage svg.miniBrand, main section.brands div article.leftImage>a, 
-    main section.brands div article.rightImage>a, main section.brands div article.rightImage svg.miniBrand, 
-    main section.obratka a.minisend, .miniLogo {
+    main section.brands article.rightImage a.miniZakaz, main section.brands article.leftImage a.miniZakaz {
         display: block;
-    }
-    main section.brands div article.rightImage{
-        padding-bottom: 10px;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    main section.brands div article.leftImage{
-        padding-bottom: 10px;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    main section.brands div article.leftImage{
-        padding-bottom: 10px;
-    }
-    main section.brands div article.rightImage a {
-        grid-column: 2/3;
-        grid-row: 1/2;
         align-self: center;
-        justify-self: center;
-    }
-    main section.brands div article.leftImage a {
-        grid-column: 1/2;
-        grid-row: 1/2;
-        align-self: center;
-        justify-self: center;
     }
     main section.news {
         padding: 0;
