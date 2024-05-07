@@ -332,6 +332,7 @@ main section.brands article.leftImage a.bigZakaz::after, main section.brands art
 }
 
 main section.brands article.leftImage a.miniZakaz {
+    display: none;
     text-decoration: none;
     color: var(--color-black);
     text-align: center;
@@ -345,6 +346,7 @@ main section.brands article.leftImage a.miniZakaz {
 }
 
 main section.brands article.rightImage a.miniZakaz {
+    display: none;
     text-decoration: none;
     color: var(--color-black);
     text-align: center;
