@@ -23,7 +23,7 @@ img {
 }
 
 body {
-    background-color: var(--color-black);
+    background-color:var(--color-black);
 }
 
 /* бургер */
@@ -115,179 +115,7 @@ header article.header div a {
     font-family: var(--font-Mont);
 }
 
-/* header article {
-    padding: 10px 250px;
-    display: grid;
-    grid-template-columns: 1fr 7fr 1fr;
-    column-gap: 60px;
-    align-items: center;
-    border-bottom: 2px solid var(--color-yellow);
-}
-
-header article #logo {
-    justify-self: start;
-}
-
-header article nav ul {
-    display: flex;
-    justify-self: center;
-    column-gap: 130px;
-}
-
-header article nav ul li a {
-    text-decoration: none;
-}
-
-header article nav ul li a {
-    font-family: var(--font-Mont);
-    font-size: 16px;
-    font-weight: 500;
-    list-style-type: none;
-    color: var(--color-white);
-}
-
-header article div {
-    font-family: var(--font-Mont);
-    font-size: 16px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-self: end;
-    color: var(--color-white);
-}
-
-header article div a {
-    text-decoration: none;
-    color: var(--color-white);
-}
-
-header article svg.miniLogo {
-    display: none;
-}
-
-header article svg#burger {
-    color: var(--color-white);
-    width: 20px;
-    display: none;
-} */
-
 /* кнопки */
-
-main section.brands div article.rightImage div a::before {
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    position: relative;
-    bottom: 50px;
-    border-width: 0 0 80px 80px;
-    border-color: var(--color-black) var(--color-black) var(--color-yellow) var(--color-black);
-}
-
-main section.brands div article.rightImage div a::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    position: relative;
-    top: 50px;
-    border-width: 80px 80px 0 0;
-    border-color: var(--color-yellow) var(--color-black) var(--color-black)  var(--color-black);
-}
-
-main section.brands div article.leftImage div a::before {
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    position: relative;
-    bottom: 50px;
-    border-width: 0 0 80px 80px;
-    border-color: var(--color-black) var(--color-black) var(--color-yellow) var(--color-black);
-}
-
-main section.brands div article.leftImage div a::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    position: relative;
-    top: 50px;
-    border-width: 80px 80px 0 0;
-    border-color: var(--color-yellow) var(--color-black) var(--color-black)  var(--color-black);
-}
-
-main section.brands div article.rightImage a {
-    text-decoration: none;
-    color: var(--color-black);
-    text-align: center;
-    background-color: var(--color-yellow);
-    padding-top: 6px;
-    padding-bottom: 6px;
-    align-self: end;
-    justify-self: start;
-    font-family: var(--font-Mont);
-    font-size: 14px;
-    font-weight: 400;
-}
-
-main section.brands div article.leftImage a {
-    text-decoration: none;
-    color: var(--color-black);
-    text-align: center;
-    background-color: var(--color-yellow);
-    padding-top: 6px;
-    padding-bottom: 6px;
-    align-self: end;
-    justify-self: start;
-    font-family: var(--font-Mont);
-    font-size: 14px;
-    font-weight: 400;
-}
-
-main section.brands div article.rightImage a::before {
-    content: '';
-    position: relative;
-    bottom: 24px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 30px 30px;
-    border-color: var(--color-black) var(--color-black) var(--color-yellow) var(--color-black);
-}
-
-main section.brands div article.leftImage a::before {
-    content: '';
-    position: relative;
-    bottom: 24px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 30px 30px;
-    border-color: var(--color-black) var(--color-black) var(--color-yellow) var(--color-black);
-}
-
-main section.brands div article.rightImage a::after {
-    content: '';
-    position: relative;
-    bottom: -24px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 30px 30px 0 0;
-    border-color: var(--color-yellow) var(--color-black) var(--color-black) var(--color-black);
-}
-
-main section.brands div article.leftImage a::after {
-    content: '';
-    position: relative;
-    bottom: -24px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 30px 30px 0 0;
-    border-color: var(--color-yellow) var(--color-black) var(--color-black) var(--color-black);
-}
 
 main section.obratka a.minisend {
     text-decoration: none;
@@ -373,113 +201,129 @@ header article.footer span {
 
 /* секция с брендами */
 
-.miniBrand {
-    display: none;
-}
-
 main section.brands {
     padding: 100px 250px;
-}
-
-main section.brands h2 {
-    color: var(--color-white);
     display: grid;
-    justify-items: center;
-    padding-bottom: 80px;
-    font-family: var(--font-Mont);
-    font-size: 40px;
-    font-weight: 700;
-}
-
-main section.brands>div {
-    display: grid;
-    row-gap: 60px
-}
-
-/* .rightImage */
-
-main section.brands div article.rightImage>a {
-    display: none;
-}
-
-main section.brands div article.rightImage {
-    color: var(--color-white);
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 20px;
-    padding-bottom: 60px;
-    border-bottom: 2px solid var(--color-yellow);
-}
-
-main section.brands div article.rightImage div {
-    display: grid;
-}
-
-main section.brands div article.rightImage div p {
-    font-family: var(--font-Mont);
-    font-size: 20px;
-    font-weight: 400;
-    padding: 2px 4px 0 0;
-}
-
-main section.brands div article.rightImage div a {
-    text-decoration: none;
-    color: var(--color-black);
-    font-family: var(--font-Mont);
-    font-size: 16px;
-    font-weight: 400;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    align-self: end;
-    justify-self: end;
-    background-color: var(--color-yellow);
-    position: absolute;
+    row-gap : 60px;
 } 
 
-/* .leftImage */
-
-main section.brands div article.leftImage>a {
-    display: none;
+main section.brands span {
+    color: var(--color-white);
 }
 
-main section.brands div article.leftImage {
-    color: var(--color-white);
+main section.brands article.leftImage {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap: 20px;
+    grid-template-columns: 460px auto;
+    grid-template-rows: auto auto;
     padding-bottom: 60px;
     border-bottom: 2px solid var(--color-yellow);
+    position: relative;
 }
 
-main section.brands div article.leftImage svg {
+main section.brands article.rightImage {
+    display: grid;
+    grid-template-columns: auto 460px;
+    grid-template-rows: auto auto;
+    padding-bottom: 60px;
+    border-bottom: 2px solid var(--color-yellow);
+    position: relative;
+}
+
+main section.brands article.leftImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-row: 1/3;
+}
+
+main section.brands article.rightImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-row: 1/3;
     grid-column: 2/3;
 }
 
-main section.brands div article.leftImage div {
-    display: grid;
+main section.brands article.leftImage p {
+    color: var(--color-white);
+    padding: 2px 4px 0 20px;
+    font-family: var(--font-Mont);
+    font-size: 20px;
+    font-weight: 400;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+main section.brands article.rightImage p {
+    color: var(--color-white);
+    padding: 2px 20px 0 4px;
+    font-family: var(--font-Mont);
+    font-size: 20px;
+    font-weight: 400;
     grid-column: 1/2;
     grid-row: 1/2;
 }
 
-main section.brands div article.leftImage div p {
-    font-family: var(--font-Mont);
-    font-size: 20px;
-    font-weight: 400;
-    padding: 2px 4px 0 0;
-}
-
-main section.brands div article.leftImage div a {
+main section.brands article.leftImage a {
+    grid-row: 2/3;
+    grid-column: 2/3;
     text-decoration: none;
     color: var(--color-black);
+    text-align: center;
+    background-color: var(--color-yellow);
+    padding: 30px;
+    height: 80px;
+    align-self: end;
+    justify-self: center;
+    position: relative;
+    position: absolute;
+    right: 80px;
     font-family: var(--font-Mont);
     font-size: 16px;
-    font-weight: 400;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    align-self: end;
-    justify-self: start;
+    font-weight: 500;
+}
+
+main section.brands article.rightImage a {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    text-decoration: none;
+    color: var(--color-black);
+    text-align: center;
     background-color: var(--color-yellow);
+    padding: 30px;
+    height: 80px;
+    align-self: end;
+    justify-self: center;
+    position: relative;
     position: absolute;
+    left: 80px;
+    font-family: var(--font-Mont);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+main section.brands article.leftImage a::before, main section.brands article.rightImage a::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 80px 80px;
+    border-color: transparent transparent var(--color-yellow) transparent;
+    position: absolute;
+    top: 0;
+    left: -80px;
+}
+
+main section.brands article.leftImage a::after, main section.brands article.rightImage a::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 80px 80px 0 0;
+    border-color: var(--color-yellow) transparent transparent transparent;
+    position: absolute;
+    top: 0;
+    right: -80px;
 }
 
 /* .news */
