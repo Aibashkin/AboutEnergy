@@ -114,3 +114,12 @@ header article.header div a {
     font-weight: 500;
     font-family: var(--font-Mont);
 }
+
+main {
+    display: grid;
+}
+
+main svg {
+    margin: 100px;
+    /* border: 1px solid red; */
+}

@@ -508,6 +508,7 @@ main section.obratka a.bigsend::after {
 /* footer */
 
 footer {
+    border-top: 2px solid var(--color-yellow);
     padding: 10px 250px;
     display: flex;
     align-items: center;

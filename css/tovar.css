@@ -83,7 +83,7 @@ header article.header {
     border-bottom: 2px solid var(--color-yellow);
 }
 
-header article.header svg.miniLogo, header article.header svg#burger {
+header article.header svg#burger {
     display: none;
 }
 
@@ -121,9 +121,8 @@ main section.tovar {
     padding: 100px 250px;
 }
 
-main section.tovar span {
-    display: grid;
-    justify-items: center;
+main section.tovar h2 {
+    text-align: center;
     padding: 0 0 30px 0;
     color: var(--color-white);
     font-family: var(--font-Mont);
@@ -131,151 +130,145 @@ main section.tovar span {
     font-weight: 700;
 }
 
-main section.tovar div {
+main section.tovar>div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
     row-gap: 60px;
 }
 
-main section.tovar div article {
+main section.tovar>div>article {
     display: grid;
-    justify-items: center;
-    padding: 0 0 30px 0;
+    row-gap: 20px;
+    padding-bottom: 20px;
     border-bottom: 2px solid var(--color-yellow);
+    justify-items: center;
 }
 
-main section.tovar div article a.miniZakaz, main section.tovar div article svg.miniTovar {
-    display: none;
-}
-
-main section.tovar div article p {
-    padding: 20px 0 30px 0;
-    color: var(--color-white);
-    font-family: var(--font-Mont);
-    font-size: 20px;
-    font-weight: 400;
-}
-
-/* кнопки */
-
-/* большие кнопки */
-
-main section.tovar div article a.bigZakaz {
+main section.tovar>div>article a.bigZakaz {
     text-decoration: none;
     color: var(--color-black);
-    text-align: center;
-    background-color: var(--color-yellow);
-    padding: 10px 40px 10px 40px;
     font-family: var(--font-Mont);
     font-size: 16px;
     font-weight: 400;
+    background-color: var(--color-yellow);
+    padding: 10px 30px;
     position: relative;
-    height: 38px;
+    height: 40px;
 }
 
-main section.tovar div article a.bigZakaz::before {
-    position: absolute;
-    left: -38px;
-    top: 0;
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 38px 38px;
-    border-color: transparent transparent var(--color-yellow) transparent;
-}
-
-main section.tovar div article a.bigZakaz::after {
-    position: absolute;
-    right: -38px;
-    top: 0;
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 38px 38px 0 0  ;
-    border-color: var(--color-yellow) transparent transparent transparent;
-}
-
-/* маленькие кнопки */
-
-main section.tovar div article a.miniZakaz {
+main section.tovar>div>article a.miniZakaz {
+    display: none;
     text-decoration: none;
     color: var(--color-black);
-    text-align: center;
-    background-color: var(--color-yellow);
-    padding: 5px 10px 5px 10px;
     font-family: var(--font-Mont);
     font-size: 16px;
     font-weight: 400;
+    background-color: var(--color-yellow);
+    padding: 5px 30px;
     position: relative;
     height: 30px;
 }
 
-main section.tovar div article a.miniZakaz::before {
+main section.tovar>div>article a.bigZakaz::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 40px 40px;
+    border-color: transparent transparent var(--color-yellow) transparent;
     position: absolute;
-    bottom: 0;
-    left: -30px;
+    top: 0;
+    left: -40px;
+}
+
+main section.tovar>div>article a.miniZakaz::before {
     content: '';
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 0 0 30px 30px;
     border-color: transparent transparent var(--color-yellow) transparent;
+    position: absolute;
+    top: 0;
+    left: -30px;
 }
 
-main section.tovar div article a.miniZakaz::after {
-    position: absolute;
-    bottom: 0;
-    right: -30px;
+main section.tovar>div>article a.bigZakaz::after {
     content: '';
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 30px 30px 0 0 ;
-    border-color: var(--color-yellow ) transparent transparent transparent;
+    border-width: 40px 40px 0 0;
+    border-color: var(--color-yellow) transparent transparent transparent;
+    position: absolute;
+    top: 0;
+    right: -40px;
 }
+
+main section.tovar>div>article a.miniZakaz::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: var(--color-yellow) transparent transparent transparent;
+    position: absolute;
+    top: 0;
+    right: -30px;
+}
+
+main section.tovar>div>article p {
+    color: var(--color-white);
+    font-family: var(--font-Mont);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+main section.tovar>div>article>div {
+    width: 460px;
+    height: 280px;
+}
+
 
 /* footer */
 
-body>footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 15px 250px;
-    align-items: center;
+footer {
     border-top: 2px solid var(--color-yellow);
+    padding: 10px 250px;
+    display: flex;
+    align-items: center;
 }
 
-body>footer>a>svg#miniLogo {
-    display: none;
+footer img {
+    grid-row: 1/3;
 }
 
-footer div.contacts {
-    color: var(--color-white);
+footer div.number {
     display: grid;
-    row-gap: 10px;
-    justify-items: center;
-    justify-self: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px 20px;
+    padding: 0px 512px 0 166px;
+}
+
+footer div.number span {
+    color: var(--color-white);
     font-family: var(--font-Mont);
     font-size: 16px;
     font-weight: 500;
+    justify-self: center;
 }
 
-body>footer>div {
+footer div:last-child {
     display: flex;
     justify-self: end;
-    column-gap: 20px;
 }
 
 @media screen and (max-width:390px) {
-    header article.header svg:nth-child(2) {
-        display: block;
-    }
-    header article.header svg#logo, header article.header nav {
+    header article.header nav {
         display: none;
-    } 
-    header article.header svg#miniLogo, header article.header svg#burger {
+    }
+    header article.header svg#burger {
         display: block;
     }
     header article.header svg#burger {
@@ -284,57 +277,60 @@ body>footer>div {
     header article.header div {
         grid-row: 1/2;
         grid-column: 2/3;
-        justify-items: end;
     }
     header article.header {
-        display: grid;
         padding: 15px 3px;
+        display: grid;
         grid-template-columns: 1fr 1fr 25px;
-        column-gap: 40px;
     }
     main section.tovar {
-        padding: 0;
+        padding: 20px 10px;
     }
-    main section.tovar span {
+    main section.tovar h2 {
         font-size: 16px;
-        padding: 20px 0 10px 0;
-    }
-    main section.tovar div {
-        grid-template-columns: 1fr;
-        row-gap: 10px;
-    }
-    main section.tovar div article {
-        grid-template-columns: 1fr 2fr;
-        position: relative;
         padding-bottom: 10px;
     }
-    main section.tovar div article svg, main section.tovar div article a {
-        display: none;
+    main section.tovar>div {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
     }
-    main section.tovar div article svg.miniTovar, main section.tovar div article a.miniZakaz,
-    body>footer>a>svg#miniLogo {
+    main section.tovar>div>article {
+        grid-template-columns: 1fr 2fr;
+        padding-bottom: 10px;
+    }
+    main section.tovar>div>article p {
+        font-size: 16px;
+        align-self: center;
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+    main section.tovar>div>article a.miniZakaz {
         display: block;
-    }
-    main section.tovar div article p {
-        font-size: 14px;
-        grid-row: 1/2;
-        grid-column: 2/3;
-    }
-    main section.tovar div article a.miniZakaz {
         grid-column: 2/3;
         grid-row: 1/2;
-        position: absolute;
-        bottom: 10px;
+        align-self: end;
     }
-    body>footer {
-        padding: 10px 15px 10px 15px;
-        margin-top: 20px;
-        grid-template-columns: 1fr 1fr;
-    }
-    body>footer>a>svg:nth-child(1), body>footer div.contacts {
+    main section.tovar>div>article a.bigZakaz {
         display: none;
     }
-    body>footer>svg {
-        justify-self: center;
+    main section.tovar>div>article>div {
+        width: 100px;
+        height: 100px;
+    }
+    footer {
+        padding: 10px 10px;
+        grid-template-columns: 125px 1fr;
+        border-top: 2px  solid var(--color-yellow);
+    }
+    footer img {
+        width: 125px;
+        height: 16px;
+        align-self: center;
+    }
+    footer div.number {
+        display: none;
+    }
+    footer div.vku {
+        padding: 0 0 0 140px;
     }
 }
