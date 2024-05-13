@@ -22,7 +22,7 @@ const sliderText = document.querySelector("header .footer span");
 
 
 let currentImageIndex = 0;
-const images = ["images/slider1.jpg", "images/slider2.jpg", "images/slider3.jpg"];
+const images = ["images/slider1.jpg", "images/slider/slider2.jpg", "images/slider/slider3.jpg"];
 const texts = ["Популярные бренды энергетических напитков на нашем сайте",
  "Заказывайте любимые энергетики через удобный вам маркетплейс",
  "Cвежие новости в мире энергетических напитков у нас на сайте"];
